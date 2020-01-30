@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="row">
+        <div class="col-md-8 mt-5">
+            <h1 class="text-white">CONTACT LIST</h1>
+        </div>
+        <hr style="background-color: white;">
+        <hr style="background-color: white;">
+        <div class="col-md-4 mt-5">
+            <a href="/contacts/new"><button class="btn btn-primary circle-rounded ml-5"><i class="fa fa-plus"
+                        aria-hidden="true" style="font-size: 20px;"></i></button></a>
+        </div>
+    </div>
+</div>
+<hr style="background-color: white;">
+<hr style="background-color: white;">
+<table class="table" style="border-radius:30%">
+    <thead class="thead-dark">
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>Mobile No</th>
+            <th>Email</th>
+            <th>Remarks</th>
+            <th>Actions</th>
+        </tr>
+    </thead>
+    <tbody class="text-white  font-weight-bold" style="background: linear-gradient(rgba(9,32,63),rgba(83,120,149));">
+        {{#each contact}}
+        <tr>
+            <td> {{fname}} </td>
+            <td>{{lname}}</td>
+            <td>{{mobile}}</td>
+            <td>{{email}}</td>
+            <td>{{comment}}</td>
+            <td>
+                <button class="btn btn-sm btn-primary "> <a class="text-white"
+                        href="/contacts/{{_id}}">Details</a></button>
+                <button class="btn btn-sm btn-danger "> <a class="text-white"
+                        href="/contacts/{{_id}}/delete">Delete</a></button>
+
+            </td>
+        </tr>
+        {{/each}}
+
+    </tbody>
+</table>

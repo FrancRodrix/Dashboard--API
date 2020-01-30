@@ -1,0 +1,29 @@
+<div>
+ 
+    <h1 class="text-white mt-4 text-center">Project detail</h1>
+    <hr>
+    <br>
+       {{#if success}}
+    <p class="alert-success">Project updated successfully.</p>
+    {{/if}}
+
+    <form action="/projects/{{project._id}}" method="POST"class="text-center col-md-8 " style="margin-left: 200px;">
+        <div class="form-row">
+            <div class="form-group col-md-6 text-white">
+                <label for="title">Title</label>
+                <input type="tetx" name="title" class="form-control" id="title" placeholder="Project title" value="{{project.title}}">
+            </div>
+            <div class="form-group col-md-6 text-white">
+                <label for="image">Image</label>
+                <input type="text" name="image" class="form-control" id="image" placeholder="Project image url" value="{{project.image}}">
+            </div>
+        </div>
+        <div class="form-group text-white">
+            <label for="description">Description</label>
+            <textarea class="form-control" id="description" placeholder="Description" name="description" rows="5">{{project.description}}</textarea>
+        </div>
+        
+        
+        <button type="submit" class="btn btn-block btn-primary">Update</button>
+    </form>
+</div>

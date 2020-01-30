@@ -1,0 +1,27 @@
+<div class=" mt-5 p-3">
+    <h1 class="text-white text-center text-uppercase">list of subscribers</h1>
+</div>
+<hr style="background-color: white;">
+<hr style="background-color: white;">
+<table class="table col-md-8 text-center rounded" style="margin-left:200px;">
+    <thead class="thead-dark">
+        <tr>
+            <th scope="col">Subscribers</th>
+            <th scope="col">Actions</th>
+
+        </tr>
+    </thead>
+    <tbody class="bg-warning">
+        {{#each subscribe}}
+        <tr>
+            <td class="text-white font-weight-bold">{{email}}</td>
+
+            <td>
+
+                <a href="/subscribe/{{_id}}/delete"> <i class="fa fa-times-circle text-white" aria-hidden="true"
+                        style="font-size:20px;"></i></a>
+            </td>
+        </tr>
+        {{/each}}
+    </tbody>
+</table>
